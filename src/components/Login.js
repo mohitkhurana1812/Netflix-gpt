@@ -46,8 +46,6 @@ const Login = () => {
                 );
               })
               .catch((error) => {});
-
-            console.log("Success", user);
             // ...
           })
           .catch((error) => {

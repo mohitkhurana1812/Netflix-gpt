@@ -12,7 +12,6 @@ const Header = () => {
   const user = useSelector((store) => store.user);
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      console.log("IInd");
       if (user) {
         const { uid, email, displayName } = user;
         dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
