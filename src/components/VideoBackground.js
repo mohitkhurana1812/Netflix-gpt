@@ -7,18 +7,32 @@ const VideoBackground = ({ movieId }) => {
       useMovieTrailer(movieId);
 
   return (
-    <div>
+    <div className="pt-10 lg:pt-0"> 
       <iframe
-        className="w-screen aspect-video"
+        className="w-full aspect-video"
         src={
           "https://www.youtube.com/embed/" +
           trailerVideo?.key +
-          "?&autoplay=1&mute=1"
+          "?rel=0&autoplay=1&mute=1&loop=1&playlist=" +
+          trailerVideo?.key
         }
         title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
       ></iframe>
     </div>
+  //   <div className="pt-10 lg:pt-0">
+  //   <iframe
+  //     className="w-full aspect-video"
+  //     src={
+  //       "https://www.youtube.com/embed/" +
+  //       movieTrailer?.key +
+  //       "?rel=0&autoplay=1&mute=1&loop=1&playlist=" +
+  //       movieTrailer?.key
+  //     }
+  //     title="YouTube video player"
+  //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+  //   ></iframe>
+  // </div>
   );
 };
 export default VideoBackground;

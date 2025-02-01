@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 import Browse from "./Browse";
 import Login from "./Login";
+import PlayMovie from "./PlayMovie";
 
 const Body = () => {
 
@@ -15,6 +16,10 @@ const Body = () => {
     {
       path: "/browse",
       element: <Browse />,
+    },
+    {
+      path: "/browse/watch/:id",
+      element: <PlayMovie />,
     },
   ]);
 
